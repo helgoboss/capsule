@@ -9,18 +9,18 @@
     </parent>
     
     <groupId>org.helgoboss</groupId>
-    <artifactId>module-support</artifactId>
+    <artifactId>capsule</artifactId>
     <version>1.1-SNAPSHOT</version>
-    <name>Module Support</name>
+    <name>Capsule</name>
     <description>
-        Very simple API for implementing and using start- and stoppable modules
+        Very simple API for implementing and using start- and stoppable mini modules
     </description>
     <packaging>bundle</packaging>
-    <url>https://github.com/helgoboss/module-support</url>
+    <url>https://github.com/helgoboss/capsule</url>
     <scm>
-        <url>https://github.com/helgoboss/module-support</url>
-        <connection>scm:git:https://github.com/helgoboss/module-support</connection>
-        <developerConnection>scm:git:https://github.com/helgoboss/module-support</developerConnection>
+        <url>https://github.com/helgoboss/capsule</url>
+        <connection>scm:git:https://github.com/helgoboss/capsule</connection>
+        <developerConnection>scm:git:https://github.com/helgoboss/capsule</developerConnection>
     </scm>
     <licenses>
         <license>

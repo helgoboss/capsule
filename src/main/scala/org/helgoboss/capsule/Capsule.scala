@@ -1,10 +1,10 @@
-package org.helgoboss.module_support
+package org.helgoboss.capsule
 
 /**
  * An instance of this class represents something which can be started and stopped. After being started and before being stopped,
- * we say the module is active. Otherwise we say it's inactive.
+ * we say the capsule is active. Otherwise we say it's inactive.
  */
-trait Module {
+trait Capsule {
   def start()
   def stop()
 }
