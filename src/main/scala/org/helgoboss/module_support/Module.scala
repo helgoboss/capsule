@@ -5,6 +5,6 @@ package org.helgoboss.module_support
  * we say the module is active. Otherwise we say it's inactive.
  */
 trait Module {
-    def start
-    def stop
+  def start()
+  def stop()
 }
