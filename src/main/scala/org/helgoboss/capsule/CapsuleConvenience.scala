@@ -1,7 +1,8 @@
 package org.helgoboss.capsule
 
 /**
- * Provides the convenient `onStart` and `onStop` methods for ad-hoc adding start and stop logic to the current scope.
+ * Provides convenient `onStart` and `onStop` methods which the end user can use for adding start and stop logic
+ * to the current scope ad hoc.
  */
 trait CapsuleConvenience {
   protected def capsuleContext: CapsuleContext

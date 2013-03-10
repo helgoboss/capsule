@@ -2,9 +2,12 @@ package org.helgoboss.capsule
 
 /**
  * A capsule represents something which is startable and stoppable. After being started and before being stopped, we say
- * the capsule is active. Otherwise we say it's inactive.
+ * the capsule is active. Otherwise, we say it's inactive.
  *
- * Implement this if you want to provide logic which will be started and stopped on certain events. Use
+ * As end user, you usually don't come into contact with capsules directly, you rather add them using convenience methods.
+ *
+ * As capsule provider, you should implement this interface in order to provide logic which will be started and
+ * stopped on certain events. You might also want to implement convenience methods which use
  * [[org.helgoboss.capsule.CapsuleContext]] to add the logic to the current capsule scope.
  */
 trait Capsule {

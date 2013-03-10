@@ -1,8 +1,15 @@
 package org.helgoboss.capsule
 
 /**
- * Represents the tree structure made of capsule scopes and contained capsules. This interface is used by clients to add
- * starting and stopping logic to the current scope.
+ * Represents the tree structure made of capsule scopes and contained capsules.
+ *
+ * As end user, you usually don't deal with this interface.
+ *
+ * As capsule provider, you use this interface for implementing the convenience methods and providing new
+ * capsule scopes.
+ *
+ * As context provider, you can implement this interface. However, you can also use the existing
+ * implementation [[org.helgoboss.capsule.DynamicCapsuleContext]].
  */
 trait CapsuleContext {
   /**

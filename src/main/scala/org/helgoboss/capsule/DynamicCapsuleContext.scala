@@ -8,8 +8,8 @@ import collection.mutable
  * A [[org.helgoboss.capsule.CapsuleContext]] implementation based on [[scala.util.DynamicVariable]] and
  * [[org.helgoboss.capsule.DefaultCapsuleScope]].
  *
- * This is the trait you have to mix into your class if you want to build a capsule-based DSL. See class
- * [[org.helgoboss.dominoe.OsgiContext]] in the project "Dominoe" for an example.
+ * As a context provider, you might want to mix this trait into your class to provide the framework for a capsule-based
+ * DSL. See class [[org.helgoboss.dominoe.OsgiContext]] in the project "Dominoe" for an example.
  */
 trait DynamicCapsuleContext extends CapsuleContext {
   /**

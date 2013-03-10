@@ -2,7 +2,12 @@ package org.helgoboss.capsule
 
 /**
  * Represents a capsule scope, that is a collection of capsules which shall all be stopped on the same event.
- * This interface allows clients to stop all capsules in the scope when the event occurs.
+ *
+ * As end user, you don't deal with this interface at all.
+ *
+ * As capsule provider, you might use this interface but you don't have to implement it. An object of this type is
+ * returned from [[org.helgoboss.capsule.CapsuleContext.executeWithinNewCapsuleScope()]] which is used to create a new
+ * scope. You should then use this object later to stop all capsules in your new scope when the stopping event occurs.
  */
 trait CapsuleScope {
   /**
