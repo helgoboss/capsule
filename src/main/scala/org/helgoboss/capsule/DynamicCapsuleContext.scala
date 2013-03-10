@@ -1,32 +1,40 @@
 package org.helgoboss.capsule
 
 import scala.util.DynamicVariable
+import collection.mutable
 
-class SimpleDynamicCapsuleContext extends DynamicCapsuleContext
 
 /**
- * Mix this trait into your class if you want to build a DSL for defining a tree of capsules which can be started and stopped.
- * See class "OsgiContext" in Dominoe for an example.
+ * A [[org.helgoboss.capsule.CapsuleContext]] implementation based on [[scala.util.DynamicVariable]] and
+ * [[org.helgoboss.capsule.DefaultCapsuleScope]].
+ *
+ * This is the trait you have to mix into your class if you want to build a capsule-based DSL. See class
+ * [[org.helgoboss.dominoe.OsgiContext]] in the project "Dominoe" for an example.
  */
 trait DynamicCapsuleContext extends CapsuleContext {
-  private val dynamicCapsuleContainer = new DynamicVariable[Option[CapsuleContainer]](None)
-
   /**
-   * Adds a capsule to the currently active capsule container and starts it.
+   * A Set representing the current scope.
    */
+  private val dynamicCapsuleSet = new DynamicVariable[Option[mutable.Set[Capsule]]](None)
+
   def addCapsule(capsule: Capsule) {
+    // Start the capsule immediately
     capsule.start()
-    dynamicCapsuleContainer.value foreach { _ += capsule }
+
+    // Add capsule to the current set if there is one
+    dynamicCapsuleSet.value foreach { _ += capsule }
   }
 
-  /**
-   * Executes the given function and makes this function see the given capsule container as active capsule container instead of the currently active one.
-   */
-  def executeWithinNewCapsuleContainer(f: => Unit): CapsuleContainer = {
-    val newCapsuleContainer = new SetBasedCapsuleContainer
-    dynamicCapsuleContainer.withValue(Some(newCapsuleContainer)) {
+  def executeWithinNewCapsuleScope(f: => Unit): CapsuleScope = {
+    // Create the new set of capsules
+    val newCapsuleSet = new mutable.HashSet[Capsule]
+
+    // Execute the function in the new set
+    dynamicCapsuleSet.withValue(Some(newCapsuleSet)) {
       f
     }
-    newCapsuleContainer
+
+    // Returns the set wrapped in the scope interface
+    new DefaultCapsuleScope(newCapsuleSet)
   }
 }
