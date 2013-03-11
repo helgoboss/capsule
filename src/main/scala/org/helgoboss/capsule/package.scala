@@ -1,7 +1,7 @@
 package org.helgoboss
 
 /**
- * Contains the basic API for building, using and extending a capsule-based DSL along with some default implementations.
+ * Basic API for building, using and extending a capsule-based DSL along with some default implementations.
  *
  * A capsule-based DSL is a generalization of that one used in the project "Dominoe". Here's an illustrative example
  * for how a capsuled-based DSL might look like:
