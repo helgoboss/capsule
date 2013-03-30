@@ -1,7 +1,7 @@
 package org.helgoboss.capsule
 
 /**
- * Represents the tree structure made of capsule scopes and contained capsules.
+ * Represents the tree structure which is formed by capsule scopes and their contained capsules.
  *
  * As end user, you usually don't deal with this interface.
  *
@@ -9,7 +9,7 @@ package org.helgoboss.capsule
  * capsule scopes.
  *
  * As context provider, you can implement this interface. However, you can also use the existing
- * implementation [[org.helgoboss.capsule.DynamicCapsuleContext]].
+ * implementation [[DynamicCapsuleContext]].
  */
 trait CapsuleContext {
   /**

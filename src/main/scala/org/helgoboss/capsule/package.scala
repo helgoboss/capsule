@@ -1,12 +1,13 @@
 package org.helgoboss
 
 /**
- * Basic API for building, using and extending a capsule-based DSL along with some default implementations.
+ * Contains a basic API and default implementation for building, using and extending a capsule-based DSL.
  *
- * A capsule-based DSL is a generalization of that one used in the project "Dominoe". Here's an illustrative example
- * for how a capsuled-based DSL might look like:
+ * A capsule-based DSL is a generalization of the DSL used in the project "Domino". Here's an illustrative example
+ * how a capsuled-based DSL might look like:
  *
  * {{{
+ * // Somewhere in your code
  * whenTurnedOn {
  *   whenDevicePluggedIn {
  *     lightLED()

@@ -8,7 +8,7 @@ package org.helgoboss.capsule
  *
  * As capsule provider, you should implement this interface in order to provide logic which will be started and
  * stopped on certain events. You might also want to implement convenience methods which use
- * [[org.helgoboss.capsule.CapsuleContext]] to add the logic to the current capsule scope.
+ * [[CapsuleContext]] to add the logic to the current capsule scope.
  */
 trait Capsule {
   /**

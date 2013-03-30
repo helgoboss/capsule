@@ -1,4 +1,5 @@
-capsule
+Capsule
 =======
 
-Very simple API for implementing and using start- and stoppable logic
+Basic API for building, using and extending a capsule-based DSL plus some
+default implementations

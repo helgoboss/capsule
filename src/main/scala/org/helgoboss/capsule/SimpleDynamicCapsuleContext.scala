@@ -1,6 +1,6 @@
 package org.helgoboss.capsule
 
 /**
- * A class extending from [[org.helgoboss.capsule.DynamicCapsuleContext]]. Use this if you don't want to use the trait.
+ * A class extending from [[DynamicCapsuleContext]]. Use this if you want to use a class instead of a trait.
  */
 class SimpleDynamicCapsuleContext extends DynamicCapsuleContext

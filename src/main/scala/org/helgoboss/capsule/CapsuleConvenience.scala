@@ -1,14 +1,14 @@
 package org.helgoboss.capsule
 
 /**
- * Provides convenient `onStart` and `onStop` methods which the end user can use for adding start and stop logic
- * to the current scope ad hoc.
+ * Provides convenient `onStart` and `onStop` methods which the end user can use for ad-hoc adding
+ * start and stop logic to the current scope.
  */
 trait CapsuleConvenience {
   protected def capsuleContext: CapsuleContext
 
   /**
-   * Adds the given start logic. It's executed immediately.
+   * Adds the given start logic. The logic is executed immediately.
    *
    * @param f start logic
    */
@@ -26,7 +26,7 @@ trait CapsuleConvenience {
   }
 
   /**
-   * Adds the given stop logic. Tthe given function will be executed when the current scope is stopped.
+   * Adds the given stop logic. The given function will be executed when the current scope is stopped.
    *
    * @param f stop logic
    */
