@@ -16,4 +16,10 @@ whenTurnedOn {
 }
 ```
 
+## Documentation
+
+- [Scaladoc](http://helgoboss.github.com/capsule/scaladoc/#org.helgoboss.capsule.package)
+
+## Further reading
+
 See project [Domino](http://github.com/helgoboss/domino) for a real-world application of this API.
